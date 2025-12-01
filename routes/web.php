@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProjectController;
 
 
@@ -22,13 +23,15 @@ Route::get('/team', [HomeController::class, 'team'])->name('team');
 
 Route::get('/teamdetails', [HomeController::class, 'teamdetails'])->name('teamdetails');
 
+Route::get('/gallery-image', [GalleryController::class, 'index'])->name('gallery');
+
 Route::get('/service', [HomeController::class, 'service'])->name('service');
 
 Route::get('/service-details', [HomeController::class, 'servicedetails'])->name('servicedetails');
 
 Route::get('/news', [HomeController::class, 'news'])->name('news');
 
-Route::get('/news-details', [HomeController::class, 'newsdetails'])->name('newsdetails');
+Route::get('/news/{id}', [HomeController::class, 'newsdetails'])->name('newsdetails');
 
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 

@@ -46,7 +46,7 @@
             <div class="image-column col-xl-7 col-lg-6 col-md-12 col-sm-12">
                 <div class="inner-column wow fadeInLeft">
                     <div class="image-box">
-                        <figure class="image"><img src="{{ asset('images/resource/image-2.jpg') }}" alt=""></figure>
+                        <figure class="image"><img src="{{ asset('images/resource/33.jpg') }}" alt=""></figure>
                     </div>
                 </div>
             </div>

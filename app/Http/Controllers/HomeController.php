@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\OtherProject;
 
 class HomeController extends Controller
 {
@@ -22,7 +23,11 @@ class HomeController extends Controller
 
     public function team()
     {
-        return view('users.team');
+        // Récupère tous les projets depuis la base de données
+        $projects = OtherProject::all();
+
+        // Envoie les projets à la vue "team"
+        return view('users.team', compact('projects'));
     }
     
     public function teamdetails()
@@ -45,9 +50,13 @@ class HomeController extends Controller
         return view('users.news');
     }
 
-    public function newsdetails()
+    public function newsdetails($id)
     {
-        return view('users.newsdetails');
+        // Trouve le projet correspondant à l’ID
+        $project = OtherProject::findOrFail($id);
+
+        // Passe les données à la vue
+        return view('users.newsdetails', compact('project'));
     }
 
     public function contact()

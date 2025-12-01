@@ -7,7 +7,7 @@
 <div class="page-wrapper">
 
 	<!-- Preloader -->
-	<div class="preloader"></div>
+	<!-- <div class="preloader"></div> -->
 
 	<!-- Main Header-->
 	@include('users.header')
@@ -17,12 +17,7 @@
 	<section class="page-title" style="background-image: url(images/background/page-title.jpg);">
 		<div class="auto-container">
 			<div class="title-outer">
-				<h1 class="title">Apropos de Nous</h1>
-				<ul class="page-breadcrumb">
-					<li><a href="{{ route('home') }}">Home</a></li>
-					<li><a href="#">Pages</a></li>
-					<li>Apropos</li>
-				</ul>
+				<h1 class="title">Qui Sommes-Nous ?</h1>				
 			</div>
 		</div>
 	</section>
@@ -82,7 +77,7 @@
 						<figure class="image-2 overlay-anim wow fadeInRight"><img src="{{ asset('images/resource/23.jpg') }}" alt=""></figure>
 						<div class="experience bounce-y">
 							<img src="{{ asset('images/resource/about-2.jpg') }}" alt="" class="icon">
-							<strong>3600+</strong> Satisfied Client
+							<strong>1000+</strong> Medecin(s)
 						</div>
 					</div>
 				</div>
@@ -92,63 +87,52 @@
 	<!--Emd About Section -->
 
 	<!-- Services Section -->
-	<section class="services-section pt-0">
+	<section class="services-section py-5">
 		<div class="auto-container">
-			<div class="sec-title text-center">
-				<span class="sub-title">What We’re Offering</span>
-				<h2>Nos 5 axes d'action.</h2>
+			<div class="sec-title text-center mb-5">
+			<span class="sub-title">SantéQuiz</span>
+			<h2>Nos axes d'Action.</h2>
 			</div>
 
-			<div class="row">
-				<!-- Service Block -->
-				
-				@foreach($axes as $axe)
-				<div class="service-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-					<div class="inner-box">
-						<div class="icon-box">
-							<i class="icon flaticon-insurance-001-heart-rate"></i>
-						</div>
+			<div class="row g-4">
+			@foreach($axes as $index => $axe)
+				<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="project-card fade-in" style="animation-delay: {{ $index * 0.1 }}s;">
+					<div class="project-image">
+					<img src="{{ asset('projectImage/' . $axe->image) }}" alt="{{ $axe->title }}">
+					</div>
+					<div class="card-body">
+					<h5 class="card-title">{{ $axe->title }}</h5>
+					<p class="card-text">{!! nl2br(e(\Illuminate\Support\Str::limit($axe->description, 143))) !!}</p>
 
-						<!-- Titre dynamique -->
-						<h5 class="title">{{ $axe->title }}</h5>
+					<button type="button" class="read-more" onclick="toggleConceptSelect({{ $axe->id }})">
+						Réalisation(s) →
+					</button>
 
-						<!-- Description dynamique -->
-						<div class="text">
-							{!! nl2br(e($axe->description)) !!}
-						</div>
-
-						<!-- Bouton Lire plus -->
-						<button type="button" class="read-more" style="background-color: white;" onclick="toggleConceptSelect({{ $axe->id }})">
-							<i class="fa fa-long-arrow-alt-right"></i> Réalisation(s)
-						</button>
-
-
-
-						<div id="concept-select-{{ $axe->id }}" style="display: none; margin-top: 15px;">
-							<label for="concepts-{{ $axe->id }}">Choisissez un concept :</label>
-							<select id="concepts-{{ $axe->id }}" onchange="goToConcept(this.value)">
-								<option value="">-- Sélectionner --</option>
-								@foreach($axe->projects as $concept)
-									<option value="{{ route('projetdetails', ['id' => $concept->id]) }}">
-										{{ $concept->title }}
-									</option>
-								@endforeach
-							</select>
-						</div>
-
+					<div id="concept-select-{{ $axe->id }}" style="display: none; margin-top: 15px;">
+						<label for="concepts-{{ $axe->id }}">Choisissez un concept :</label>
+						<select id="concepts-{{ $axe->id }}" onchange="goToConcept(this.value)">
+						<option value="">-- Sélectionner --</option>
+						@foreach($axe->projects as $concept)
+							<option value="{{ route('projetdetails', ['id' => $concept->id]) }}">
+							{{ $concept->title }}
+							</option>
+						@endforeach
+						</select>
 					</div>
 					</div>
-
-				@endforeach
-												
+				</div>
+				</div>
+			@endforeach
 			</div>
 
-			<div class="bottom-box">
-				<div class="text">Agir ensemble pour une <strong>santé</strong> équitable et humaine.</div>
-				<a href="page-services.html" class="theme-btn btn-style-one"><span class="btn-title">Explore now</span></a>
+			<div class="bottom-box text-center mt-5">
+			<p class="text">Agir ensemble pour une <strong>santé</strong> équitable et humaine.</p>
+			<a href="page-services.html" class="read-more">Explore now →</a>
 			</div>
 		</div>
-	</section>
+		</section>
+
 
 	<!--  -->
 	<section class="team-section pt-5 pb-5">
@@ -308,6 +292,108 @@
 </div><!-- End Page Wrapper -->
 @endsection
 
+<style>
+	:root {
+  --main-green: #1c7c3c;
+  --hover-green: rgba(28, 124, 60, 0.08);
+  --card-bg: #f7f8f7;
+}
+
+.project-card {
+  background: #fff;
+  border: 2px solid var(--main-green);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(28, 124, 60, 0.1);
+  transition: all 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.card-body {
+  background-color: var(--card-bg);
+  padding: 20px 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.read-more {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--main-green);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.read-more:hover {
+  background: #166b34;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(28, 124, 60, 0.25);
+  border-color: #1c7c3c;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease forwards;
+}
+
+</style>
+
 <script>
 function toggleConceptSelect(id) {
     const selectBox = document.getElementById('concept-select-' + id);
@@ -321,7 +407,6 @@ function goToConcept(url) {
         window.location.href = url;
     }
 }
-
 
 // partie mission et vision
 function toggleAccordion(index) {

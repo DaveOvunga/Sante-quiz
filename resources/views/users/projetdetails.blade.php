@@ -7,7 +7,7 @@
 <div class="page-wrapper">
 
 	<!-- Preloader -->
-	<div class="preloader"></div>
+	<!-- <div class="preloader"></div> -->
 
 	<!-- Main Header-->
 	@include('users.header')
@@ -18,11 +18,11 @@
 		<div class="auto-container">
 			<div class="title-outer">
 				<h1 class="title">Project Details</h1>
-				<ul class="page-breadcrumb">
+				<!-- <ul class="page-breadcrumb">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="#">Pages</a></li>
 					<li>Projects</li>
-				</ul>
+				</ul> -->
 			</div>
 		</div>
 	</section>
@@ -34,7 +34,7 @@
 			<div class="row">
 				<div class="col-xl-12">
 					<div class="project-details__top">
-						<div class="project-details__img"><img src="{{ asset('projectImage/' . $project->image) }}" alt=""></div>
+						<!-- <div class="project-details__img"><img src="{{ asset('projectImage/' . $project->image) }}" alt=""></div> -->
 					</div>
 				</div>
 			</div>
@@ -76,7 +76,7 @@
 								<ul class="list-unstyled project-details__details-list">
 									<li>
 										<p class="project-details__client">Date</p>
-										<h4 class="project-details__name">santéquiz</h4>
+										<!-- <h4 class="project-details__name">santéquiz</h4> -->
 									</li>
 									<li>
 										<p class="project-details__client">Client</p>
@@ -146,8 +146,8 @@
 	<section class="projects-section-two pt-0">
 		<div class="auto-container">
 			<div class="sec-title text-center">
-				<span class="sub-title">Get an insurance</span>
-				<h2>Best Packages</h2>
+				<span class="sub-title">SantéQuiz</span>
+				<h2>Nos Service(s)</h2>
 			</div>
 
 			<div class="carousel-outer">

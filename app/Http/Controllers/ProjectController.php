@@ -11,7 +11,7 @@ class ProjectController extends Controller
     // Affiche la liste des projets
     public function index()
     {
-        $projects = Project::all();
+        $projects = Project::take(6)->get();
         return view('users.project', compact('projects'));
     }
 

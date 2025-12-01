@@ -15,7 +15,7 @@
 
         <div class="sec-title text-center light">
             <span class="sub-title">Recevez un accompagnement médical ou académique</span>
-            <h2>Meilleurs projet(s)</h2>
+            <h2>Nos Service(s)</h2>
         </div>
 
         <div class="carousel-outer">
@@ -24,12 +24,12 @@
                 <div class="project-block">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><a href="page-project-details.html"><img src="{{ asset('images/resource/project-3.jpg') }}" alt=""></a>
+                            <figure class="image"><a href="page-project-details.html"><img src="{{ asset('images/resource/41.jpg') }}" alt=""></a>
                             </figure>
                             <div class="info-box">
-                                <a href="page-project-details.html" class="read-more"><i class="fa fa-long-arrow-alt-right"></i></a>
+                                <a href="{{ route('project') }}" class="read-more"><i class="fa fa-long-arrow-alt-right"></i></a>
                                 <span class="cat">Life</span>
-                                <h6 class="title"><a href="page-project-details.html">SanteEliteAwards – Valorisation des talents en santé</a></h6>
+                                <h6 class="title"><a href="{{ route('project') }}">SanteEliteAwards – Valorisation des talents en santé</a></h6>
                             </div>
                         </div>
                     </div>
@@ -39,12 +39,12 @@
                 <div class="project-block">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><a href="page-project-details.html"><img src="{{ asset('images/resource/project-1.jpg') }}" alt=""></a>
+                            <figure class="image"><a href="{{ route('project') }}"><img src="{{ asset('images/resource/37.jpg') }}" alt=""></a>
                             </figure>
                             <div class="info-box">
                                 <a href="page-project-details.html" class="read-more"><i class="fa fa-long-arrow-alt-right"></i></a>
                                 <span class="cat">Health</span>
-                                <h6 class="title"><a href="page-project-details.html">Campagnes communautaires de prévention sanitaire</a></h6>
+                                <h6 class="title"><a href="{{ route('project') }}">Campagnes communautaires de prévention sanitaire</a></h6>
                             </div>
                         </div>
                     </div>
@@ -54,12 +54,12 @@
                 <div class="project-block">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><a href="page-project-details.html"><img src="{{ asset('images/resource/project-2.jpg') }}" alt=""></a>
+                            <figure class="image"><a href="{{ route('project') }}"><img src="{{ asset('images/resource/41.jpg') }}" alt=""></a>
                             </figure>
                             <div class="info-box">
-                                <a href="page-project-details.html" class="read-more"><i class="fa fa-long-arrow-alt-right"></i></a>
+                                <a href="{{ route('project') }}" class="read-more"><i class="fa fa-long-arrow-alt-right"></i></a>
                                 <span class="cat">Health</span>
-                                <h6 class="title"><a href="page-project-details.html">Programme d’accompagnement académique en santé</a></h6>
+                                <h6 class="title"><a href="{{ route('project') }}">Programme d’accompagnement académique en santé</a></h6>
                             </div>
                         </div>
                     </div>
@@ -69,12 +69,12 @@
                 <div class="project-block">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><a href="page-project-details.html"><img src="{{ asset('images/resource/project-4.jpg') }}" alt=""></a>
+                            <figure class="image"><a href="{{ route('project') }}"><img src="{{ asset('images/resource/37.jpg') }}" alt=""></a>
                             </figure>
                             <div class="info-box">
                                 <a href="page-project-details.html" class="read-more"><i class="fa fa-long-arrow-alt-right"></i></a>
                                 <span class="cat">Health</span>
-                                <h6 class="title"><a href="page-project-details.html">Appui humanitaire aux structures de santé défavorisées</a></h6>
+                                <h6 class="title"><a href="{{ route('project') }}">Appui humanitaire aux structures de santé défavorisées</a></h6>
                             </div>
                         </div>
                     </div>

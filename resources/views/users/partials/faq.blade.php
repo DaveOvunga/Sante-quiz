@@ -56,7 +56,7 @@
             <div class="image-column col-lg-6 col-md-12 col-sm-12">
                 <div class="inner-column">
                     <div class="image-box">
-                        <figure class="image overlay-anim"><img src="{{ asset('images/resource/faq.jpg') }}" alt=""></figure>
+                        <figure class="image overlay-anim"><img src="{{ asset('images/resource/12.jpg') }}" alt=""></figure>
                     </div>
 
                     <div class="graph-box">

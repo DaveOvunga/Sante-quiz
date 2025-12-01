@@ -6,7 +6,7 @@
 <div class="page-wrapper">
 
 	<!-- Preloader -->
-	<div class="preloader"></div>
+	<!-- <div class="preloader"></div> -->
 
 	<!-- Main Header-->	
 	 @include('users.header')
@@ -17,47 +17,49 @@
 	<!--END Banner Section Two -->
 
 	<!-- Features Section -->
-    @include('users.partials.features')
+    
 	<!-- End Offer Section -->
 
 	<!-- About Section Two -->
 	@include('users.partials.aboutSection')
 	<!--Emd About Section Two -->
-
+	@include('users.partials.features')
 	<!-- Call To Action -->
-	@include('users.partials.callToAction')
+	
 	<!--End Call To Action -->
 
 	<!-- Services Section -->
 	@include('users.partials.services')
 	<!-- End Services Section-->
-
+	
+	
 	<!-- FAQ Section -->
-	@include('users.partials.faq')
+	
 	<!--End FAQ Section -->
 
 	<!-- Features Section 2 -->
-	@include('users.partials.features2')
+	
 	<!-- End Offer Section -->
 
 	<!-- Projects section two-->
-	@include('users.partials.projectSection')
+	
 	<!-- End Projects Section -->
+	@include('users.partials.projectSection')
 
+	@include('users.partials.callToAction')
 	<!-- Why Choose Us -->
 	@include('users.partials.whyChooseUs')
 	<!--Emd Why Choose Us -->
-
+	@include('users.partials.faq')
 	<!-- Testimonial Section -->
 	@include('users.partials.testimonial')
 	<!-- End Testimonial Section -->
 
-    <!-- Contact Section   -->
-    @include('users.partials.contactSection')
+    <!-- Contact Section   -->    
     <!--End Contact Section -->
 
 	<!-- News Section -->
-	@include('users.partials.news')
+	
 	<!--End News Section -->
 
 	<!-- Main Footer -->
