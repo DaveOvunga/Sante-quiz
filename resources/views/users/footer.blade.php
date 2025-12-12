@@ -19,7 +19,7 @@
                 <div class="inner">
                     <i class="icon fa fa-envelope"></i>
                     <span class="sub-title">Send Email</span>
-                    <div class="text"><a href="mailto:needhelp@company.com">santequiz@gmail.com</a></div>
+                    <div class="text"><a href="mailto:needhelp@company.com">contact@santequiz.org</a></div>
                 </div>
             </div>
             <!-- Contact info Block -->

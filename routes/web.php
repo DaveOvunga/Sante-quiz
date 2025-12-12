@@ -37,6 +37,13 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('dashboard');
 
+use App\Http\Controllers\ActualiteController;
+
+Route::get('/actualites', [ActualiteController::class, 'index'])->name('actualites.index');
+
+Route::get('/actualites/{id}', [ActualiteController::class, 'show'])->name('actualites.show');
+
+
 // Route::get('/project/{id}', [ProjectController::class, 'show'])->name('project.details');
 
 

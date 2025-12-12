@@ -9,7 +9,11 @@
                 </div>
             </div>
             <div class="text-column">
-                <div class="text"> SANTEQUIZ agit pour une santé équitable, durable et accessible à tous, en RDC et au-delà. Nos actions touchent les communautés, les professionnels et les institutions. </div>
+                <div class="text"> Santequiz regorge de ressources humaines (plus de 1 000 
+                personnes formées et membres), ainsi que d’une expertise et 
+                de carnets d’adresses solides, pouvant répondre 
+                efficacement à plusieurs besoins en produits et services de 
+                santé en RDC.</div>
             </div>
         </div>
 

@@ -46,9 +46,13 @@
 
 							<div class="about-block-six">
 								<i class="icon flaticon-insurance-026-love"></i>
-								<h5 class="title" onclick="toggleAccordion(0)">Vision <i class="fa fa-chevron-up"></i></h5>
+								<h5 class="title" onclick="toggleAccordion(0)">Genèse <i class="fa fa-chevron-up"></i></h5>
 								<div class="text" style="display: block;">
-									Une santé publique de qualité, accessible à tous, soutenue par la science, l’innovation, la solidarité et l’action collective, pour bâtir un système de santé plus fort et plus humain.
+									Santequiz est née de la crise de la Covid-19 pour 
+                                    répondre au besoin pressant de promotion de la 
+                                    santé, de prévention des maladies et d’éducation 
+                                    sanitaire communautaire à travers des actions de 
+                                    proximité.
 								</div>
 							</div>
 
@@ -103,7 +107,7 @@
 					</div>
 					<div class="card-body">
 					<h5 class="card-title">{{ $axe->title }}</h5>
-					<p class="card-text">{!! nl2br(e(\Illuminate\Support\Str::limit($axe->description, 143))) !!}</p>
+					<!-- <p class="card-text">{!! nl2br(e(\Illuminate\Support\Str::limit($axe->description, 143))) !!}</p> -->
 
 					<button type="button" class="read-more" onclick="toggleConceptSelect({{ $axe->id }})">
 						Réalisation(s) →

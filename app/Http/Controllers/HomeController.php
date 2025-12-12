@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\OtherProject;
+use App\Models\Actualite;   
 
 class HomeController extends Controller
 {
@@ -62,6 +63,14 @@ class HomeController extends Controller
     public function contact()
     {
         return view('users.contact');
+    }
+
+    public function indexActualite()
+    {
+        // Récupère uniquement les 2 dernières actualités
+        $lastActualites = Actualite::latest()->take(2)->get();
+
+        return view('welcome', compact('lastActualites'));
     }
     
 

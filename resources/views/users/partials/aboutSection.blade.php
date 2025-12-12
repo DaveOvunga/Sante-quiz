@@ -7,8 +7,14 @@
 						<div class="sec-title">
 							<span class="sub-title">Bienvenue sur le Site Santé Quiz</span>
 							<h2>Qui Sommes-Nous <span style="size: 20px;">?</span></h2>
-                        <div class="text">SANTEQUIZ – ASBL est une Association Sans But Lucratif qui œuvre dans les domaines de la santé publique, de la médecine et du développement durable, en République Démocratique du Congo et au-delà.
-Face aux urgences sanitaires de l’heure, aux inégalités d’accès aux soins et aux défis structurels, nous développons des actions concrètes, inclusives et intergénérationnelles mobilisant les professionnels de santé, les étudiants, les partenaires, les communautés et les institutions. </div>
+                        <div class="text">Association sans but lucratif œuvrant en RDC depuis 
+                        2021, avec plusieurs réalisations et concepts pour 
+                        l’amélioration des conditions de santé et l’accès 
+                        aux soins et aux informations de santé pour tous.
+                        Elle est reconnue aujourd’hui comme Association 
+                        Sans But Lucratif de droit congolais, enregistrée sous 
+                        le numéro F92/53 236, avec son acte notarié, 
+                        conformément à la législation en vigueur. </div>
                     </div>
 
                     <!-- <div class="row">

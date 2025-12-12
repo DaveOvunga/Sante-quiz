@@ -5,7 +5,7 @@
 				<div class="top-left">
 					<!-- Info List -->
 					<ul class="list-style-one">
-						<li><i class="fa fa-envelope"></i> <a href="mailto:needhelp@company.com">santequiz@gmail.com</a></li>
+						<li><i class="fa fa-envelope"></i> <a href="mailto:needhelp@company.com">contact@santequiz.org</a></li>
 						<li><i class="fa fa-map-marker"></i> 144, Blvd du 30 Juin 3ème niveau, Local A Immeuble Dijon Center Gombe / Kinshasa</li>
 					</ul>
 				</div>
@@ -45,6 +45,8 @@
                         <li><a href="{{ route('project') }}">Réalisations</a></li>
                         <li><a href="{{ route('team') }}">Notre Équipe</a></li>
                         <li><a href="{{ route('gallery') }}">Galerie(s)</a></li>
+                        <li><a href="{{ route('actualites.index') }}">Actualités</a></li>
+
                         <!-- <li><a href="{{ route('service') }}">Services</a></li> -->
 
                         @guest
@@ -52,7 +54,7 @@
                             <li><a href="{{ route('register') }}">S'inscrire</a></li> -->
                         @endguest
 
-                        @auth
+                        <!-- @auth
                             <li class="dropdown">
                             <a href="#">👋 {{ Auth::user()->name }}</a>
                         <ul>
@@ -64,7 +66,7 @@
                 </li>
             </ul>
         </li>
-    @endauth
+    @endauth -->
 </ul>
 
                     </nav>
@@ -118,7 +120,7 @@
                     <div class="contact-info-box">
                         <span class="icon lnr-icon-envelope1"></span>
                         <span class="title">Send Email</span>
-                        <a href="mailto:help@company.com">santequiz@gmail.com</a>
+                        <a href="mailto:help@company.com">contact@santequiz.org</a>
                     </div>
                 </li>
                 <li>

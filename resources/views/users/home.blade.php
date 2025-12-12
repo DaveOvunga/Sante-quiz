@@ -9,7 +9,10 @@
 	<!-- <div class="preloader"></div> -->
 
 	<!-- Main Header-->	
-	 @include('users.header')
+	 @if (!str_starts_with(request()->path(), 'admin'))
+		@include('users.header')
+	@endif
+
 	<!--End Main Header -->
 
 	<!-- Banner Section Two-->
